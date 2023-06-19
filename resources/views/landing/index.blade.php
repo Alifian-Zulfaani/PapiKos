@@ -15,36 +15,8 @@
 </head>
 
 <body>
-    <nav class="mb-70 navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" height="48" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Explore</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Testimonials</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="btn btn-secondary" href="#">Sign In</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @include('components.navbar')
+
     <section class="header mb-70">
         <div class="container">
             <div class="row align-items-center">
@@ -107,11 +79,11 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="{{ route('details') }}">
+                        <a href="{{ route('landing.details') }}">
                             <img src="images/house1.png" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="{{ route('details') }}">
+                            <a href="{{ route('landing.details') }}">
                                 <h3 class="small-header mb-2">
                                     Coral Brown
                                 </h3>
@@ -123,9 +95,13 @@
                                         Exnoparty
                                     </p>
                                 </div>
+                                @php
+                                    $hasBooked = false;
+                                @endphp
                                 <div class="price">
                                     <p class="mb-0">
-                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                        {{ $hasBooked ? 'Sold Out' : '$28,109' }}<span class="extra-small-paragraph">
+                                            {{ $hasBooked ? '' : '/mo' }}</span>
                                     </p>
                                 </div>
                                 <div class="clear"></div>

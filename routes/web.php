@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing.index');
-})->name('home');
-Route::get('/details', function () {
-    return view('landing.details');
-})->name('details');
+Route::get('testimonials', [LandingController::class, 'testimonials'])->name('landing.testimonials');
+
+Route::get('details', [LandingController::class, 'details'])->name('landing.details');
+Route::resource('/', LandingController::class);
