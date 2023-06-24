@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="images/banner.png" alt="" class="img-fluid">
+                    <img src="{{ asset('images/banner.png') }}" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row text-center mb-50">
                 <div class="col-lg-12">
-                    <img src="images/ic_best.svg" height="42" alt="" class="mb-16">
+                    <img src="{{ asset('images/ic_best.svg') }}" height="42" alt="" class="mb-16">
                     <h3 class="big-header">
                         Best of The Best
                     </h3>
@@ -79,24 +79,24 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="{{ route('landing.details') }}">
-                            <img src="images/house1.png" alt="" class="img-fluid">
+                        <a href="{{ route('landing.details', 'coral-pik-seven') }}">
+                            <img src="{{ asset('images/house1.png') }}" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="{{ route('landing.details') }}">
+                            <a href="{{ route('landing.details', 'coral-pik-seven') }}">
                                 <h3 class="small-header mb-2">
-                                    Coral Brown
+                                    Coral PIK Seven
                                 </h3>
                             </a>
                             <div class="footer">
                                 <div class="location d-flex flex-row ">
-                                    <img src="images/ic_loc.svg" height="20" alt="">
+                                    <img src="{{ asset('images/ic_loc.svg') }}" height="20" alt="">
                                     <p class="small-paragraph mb-0">
                                         Exnoparty
                                     </p>
                                 </div>
                                 @php
-                                    $hasBooked = false;
+                                    $hasBooked = true;
                                 @endphp
                                 <div class="price">
                                     <p class="mb-0">
@@ -111,18 +111,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="">
-                            <img src="images/house2.png" alt="" class="img-fluid">
+                        <a href="{{ route('landing.details', 'coral-brown') }}">
+                            <img src="{{ asset('images/house2.png') }}" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="">
+                            <a href="{{ route('landing.details', 'coral-brown') }}">
                                 <h3 class="small-header mb-2">
                                     Coral Brown
                                 </h3>
                             </a>
                             <div class="footer">
                                 <div class="location d-flex flex-row ">
-                                    <img src="images/ic_loc.svg" height="20" alt="">
+                                    <img src="{{ asset('images/ic_loc.svg') }}" height="20" alt="">
                                     <p class="small-paragraph mb-0">
                                         Exnoparty
                                     </p>
@@ -139,18 +139,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="">
-                            <img src="images/house3.png" alt="" class="img-fluid">
+                        <a href="{{ route('landing.details', 'jamalla-house') }}">
+                            <img src="{{ asset('images/house3.png') }}" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="">
+                            <a href="{{ route('landing.details', 'jamalla-house') }}">
                                 <h3 class="small-header mb-2">
-                                    Coral Brown
+                                    Jamalla House
                                 </h3>
                             </a>
                             <div class="footer">
                                 <div class="location d-flex flex-row ">
-                                    <img src="images/ic_loc.svg" height="20" alt="">
+                                    <img src="{{ asset('images/ic_loc.svg') }}" height="20" alt="">
                                     <p class="small-paragraph mb-0">
                                         Exnoparty
                                     </p>
@@ -167,18 +167,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="">
-                            <img src="images/house4.png" alt="" class="img-fluid">
+                        <a href="{{ route('landing.details', 'saung-sunda') }}">
+                            <img src="{{ asset('images/house4.png') }}" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="">
+                            <a href="{{ route('landing.details', 'saung-sunda') }}">
                                 <h3 class="small-header mb-2">
-                                    Coral Brown
+                                    Saung Sunda
                                 </h3>
                             </a>
                             <div class="footer">
                                 <div class="location d-flex flex-row ">
-                                    <img src="images/ic_loc.svg" height="20" alt="">
+                                    <img src="{{ asset('images/ic_loc.svg') }}" height="20" alt="">
                                     <p class="small-paragraph mb-0">
                                         Exnoparty
                                     </p>
@@ -195,18 +195,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="">
-                            <img src="images/house5.png" alt="" class="img-fluid">
+                        <a href="{{ route('landing.details', 'the-blocks') }}">
+                            <img src="{{ asset('images/house5.png') }}" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="">
+                            <a href="{{ route('landing.details', 'the-blocks') }}">
                                 <h3 class="small-header mb-2">
-                                    Coral Brown
+                                    The Blocks
                                 </h3>
                             </a>
                             <div class="footer">
                                 <div class="location d-flex flex-row ">
-                                    <img src="images/ic_loc.svg" height="20" alt="">
+                                    <img src="{{ asset('images/ic_loc.svg') }}" height="20" alt="">
                                     <p class="small-paragraph mb-0">
                                         Exnoparty
                                     </p>
@@ -223,18 +223,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="">
-                            <img src="images/house6.png" alt="" class="img-fluid">
+                        <a href="{{ route('landing.details', 'sudut-luas') }}">
+                            <img src="{{ asset('images/house6.png') }}" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="">
+                            <a href="{{ route('landing.details', 'sudut-luas') }}">
                                 <h3 class="small-header mb-2">
-                                    Coral Brown
+                                    Sudut Luas
                                 </h3>
                             </a>
                             <div class="footer">
                                 <div class="location d-flex flex-row ">
-                                    <img src="images/ic_loc.svg" height="20" alt="">
+                                    <img src="{{ asset('images/ic_loc.svg') }}" height="20" alt="">
                                     <p class="small-paragraph mb-0">
                                         Exnoparty
                                     </p>
@@ -251,18 +251,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="">
-                            <img src="images/house7.png" alt="" class="img-fluid">
+                        <a href="{{ route('landing.details', 'pasti-nyaman') }}">
+                            <img src="{{ asset('images/house7.png') }}" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="">
+                            <a href="{{ route('landing.details', 'pasti-nyaman') }}">
                                 <h3 class="small-header mb-2">
-                                    Coral Brown
+                                    Pasti Nyaman
                                 </h3>
                             </a>
                             <div class="footer">
                                 <div class="location d-flex flex-row ">
-                                    <img src="images/ic_loc.svg" height="20" alt="">
+                                    <img src="{{ asset('images/ic_loc.svg') }}" height="20" alt="">
                                     <p class="small-paragraph mb-0">
                                         Exnoparty
                                     </p>
@@ -279,18 +279,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="item">
-                        <a href="">
-                            <img src="images/house8.png" alt="" class="img-fluid">
+                        <a href="{{ route('landing.details', 'hanna-hijau') }}">
+                            <img src="{{ asset('images/house8.png') }}" alt="" class="img-fluid">
                         </a>
                         <div class="info">
-                            <a href="">
+                            <a href="{{ route('landing.details', 'hanna-hijau') }}">
                                 <h3 class="small-header mb-2">
-                                    Coral Brown
+                                    Hanna Hijau
                                 </h3>
                             </a>
                             <div class="footer">
                                 <div class="location d-flex flex-row ">
-                                    <img src="images/ic_loc.svg" height="20" alt="">
+                                    <img src="{{ asset('images/ic_loc.svg') }}" height="20" alt="">
                                     <p class="small-paragraph mb-0">
                                         Exnoparty
                                     </p>
