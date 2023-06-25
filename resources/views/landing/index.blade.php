@@ -73,3 +73,6 @@
         </div>
     </section>
 @endsection
+@push('after-scripts') {{-- push sebagai injector --}}
+    <script src="{{ asset('js/premium.js') }}"></script>
+@endpush
