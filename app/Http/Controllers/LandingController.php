@@ -28,6 +28,13 @@ class LandingController extends Controller
         //
     }
 
+    public function wishlist()
+    {
+        //
+        return view('landing.wishlist');
+
+    }
+
     public function testimonials()
     {
         //
